@@ -5,18 +5,21 @@
     <title>Karthik</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
 <div id="header">
     <div class="container">
         <nav>
-            <ul>
-                <li><b> <a href="#">Home</a></b></li>
-                <li><b><a href="#">About</a></b></li>
-                <li><b> <a href="#">Portfolio</a></b></li>
-                <li><b> <a href="#">Contact</a></b></li>   
-                    
+            <ul id="sidemenu">
+                <li><b> <a href="#header">Home</a></b></li>
+                <li><b><a href="#about">About</a></b></li>
+                <li><b> <a href="#Portfolio">Portfolio</a></b></li>
+                <li><b> <a href="#contact">Contact</a></b></li>   
+                <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
     </div>
     
@@ -196,9 +199,18 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab"); }
 </script>
+<script>
+    var sidemeu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemeu.style.right="0px";
+    }
+    function closemenu(){
+        sidemeu.style.right="-200px"; 
+    }
+</script>
 
             
 
 
 
-</body></html>
+</body></html>  
